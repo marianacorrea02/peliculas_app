@@ -20,14 +20,18 @@ class CardSwiper extends StatelessWidget {
         itemHeight: size.height * 0.9,
         //se contruye bajo demanda
         itemBuilder: (_, int index) {
-          return ClipRRect(
-            borderRadius: BorderRadius.circular(20  ),
-            child: const FadeInImage(
-              placeholder:AssetImage('assets/no-image.jpg'), 
-              image: NetworkImage('https://via.placeholder.com/300x400'),
-              //adaptar imagen al tamaño del contenedor padre
-              fit: BoxFit.cover
-              ),
+          return GestureDetector(
+            //cambiar de pantalla cuando se haga tab
+            onTap: () => Navigator.pushNamed(context,'details', arguments: 'prueba'),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20  ),
+              child: const FadeInImage(
+                placeholder:AssetImage('assets/no-image.jpg'), 
+                image: NetworkImage('https://via.placeholder.com/300x400'),
+                //adaptar imagen al tamaño del contenedor padre
+                fit: BoxFit.cover
+                ),
+            ),
           );
         },
       )
