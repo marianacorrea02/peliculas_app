@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:peliculas_app/screens/screens.dart';
-
+// se pueden exportar paquetes para facilitar widgets
 void main() {
   runApp(const MainApp());
 }
