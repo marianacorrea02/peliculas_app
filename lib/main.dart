@@ -18,6 +18,12 @@ class MainApp extends StatelessWidget {
         'home': ( _ ) => HomeScreen(),
         'details':( _ ) => DetailsScreen(),
       },
+      // cinfigurar temas
+      theme: ThemeData.light().copyWith(
+        appBarTheme: AppBarTheme(
+          color: Colors.green,
+        )
+      )
     );
   }
 }
