@@ -20,8 +20,8 @@ class CardSwiper extends StatelessWidget {
         itemHeight: size.height * 0.9,
         //se contruye bajo demanda
         itemBuilder: (_, int index) {
+          //cambiar de pantalla cuando se haga tab
           return GestureDetector(
-            //cambiar de pantalla cuando se haga tab
             onTap: () => Navigator.pushNamed(context,'details', arguments: 'prueba'),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20  ),
