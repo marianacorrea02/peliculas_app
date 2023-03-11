@@ -18,6 +18,8 @@ class MovieSlider extends StatelessWidget {
           //toma todo el espacio restante 
           Expanded(
             child: ListView.builder(
+              //darle direccion al scroll por defecto es vertical
+              scrollDirection: Axis.horizontal,
               itemCount: 20,
               itemBuilder:(_, int index) {
                 return Container(
