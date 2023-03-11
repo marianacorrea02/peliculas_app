@@ -16,12 +16,15 @@ class HomeScreen extends StatelessWidget {
           }, icon: Icon(Icons.search))
         ],
       ),
-      body: Column(
-        children: [
-          CardSwiper(),
-          SizedBox(height: 50,),
-          MovieSlider(),
-        ],
+      //permite hacer scroll en toda la pantalla
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CardSwiper(),
+            SizedBox(height: 50,),
+            MovieSlider(),
+          ],
+        ),
       )
     );
   }
