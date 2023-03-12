@@ -1,8 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas_app/providers/movies.proveder.dart';
 import 'package:peliculas_app/screens/screens.dart';
+import 'package:provider/provider.dart';
 // se pueden exportar paquetes para facilitar widgets
 void main() {
-  runApp(const MainApp());
+  // para llamar al provider
+  AppState();
+
+  
+}
+
+class AppState extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => MoviesProvider(),)
+      ],
+      // llame la app
+      child: MainApp(),);
+  }
 }
 
 class MainApp extends StatelessWidget {
