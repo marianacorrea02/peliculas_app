@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas_app/widgets/castings_card.dart';
 
 
 //stlessw
@@ -19,6 +20,15 @@ class DetailsScreen extends StatelessWidget {
             delegate: SliverChildListDelegate(
                 [
                   _PosterAndTitle(),
+                  _Overview(),
+                  _Overview(),
+                  _Overview(),
+                  _Overview(),
+                  _Overview(),
+                  _Overview(),
+                  SizedBox(height: 10,),
+                  CastingCards(),
+
                 ]
               )
             )
@@ -95,6 +105,21 @@ class _PosterAndTitle extends StatelessWidget {
             ],
           )
         ],
+      ),
+    );
+  }
+}
+class _Overview extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+
+      child: Text('loMinim occaecat non ex voluptate adipisicing minim aliqua. Eiusmod adipisicing labore ex ipsum laboris eu id sit nisi laboris anim exercitation. Ut esse commodo velit velit.',
+      textAlign: TextAlign.justify,
+      style: Theme.of(context).textTheme.subtitle1,
+      
       ),
     );
   }
