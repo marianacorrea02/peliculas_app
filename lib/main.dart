@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 // se pueden exportar paquetes para facilitar widgets
 void main() {
   // para llamar al provider
-  AppState();
+  runApp(AppState());
 
   
 }
